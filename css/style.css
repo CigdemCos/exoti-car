@@ -54,8 +54,6 @@ body{
 	width: 1120px;
 	height: 100%;
 	margin:0 auto;
-
-
 }
 
 /*====== HEADER =====*/
@@ -176,38 +174,46 @@ h1{
 }
 
 /*================ ARTICLES =========*/
-.articles{
-	background: #ffffff; /* Old browsers */
-    background: -moz-linear-gradient(-5deg, #ffffff 0%, #ffffff 50%, #1b1b1b 50%, #1b1b1b 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(-5deg, #ffffff 0%,#ffffff 50%,#1b1b1b 50%,#1b1b1b 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(95deg, #ffffff 0%,#ffffff 50%,#1b1b1b 50%,#1b1b1b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+.art-main{
+    display: grid;
+    /*grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));*/
+    /*grid-template-columns: repeat(auto-fill, 610px);*/
+    grid-template-columns: repeat(auto-fill, minmax(600px, 1.5fr));
+
 }
-.articles>.wrapper::after, .page-footer>.wrapper::after{
-	content: '.';
-	font-size: 0;
-	height: 1px;
+.box{	
 	width: 100%;
-	display: block;
-	clear:both;
+	padding-left:115px;
+    box-sizing: border-box;
+}
+
+.col{ 
+  width: 100%;
+}
+
+.articles{
+	background: #b2b2b2; /* Old browsers */
+    background: -moz-linear-gradient(-5deg, #b2b2b2 0%, #b2b2b2 50%, #1b1b1b 50%, #1b1b1b 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-5deg, #b2b2b2 0%,#b2b2b2 50%,#1b1b1b 50%,#1b1b1b 100%); /* Chrome10-25,Safari5.1-6 */
+   /* background: linear-gradient(95deg, #ffffff 0%,#ffffff 50%,#1b1b1b 50%,#1b1b1b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    background: linear-gradient(95deg, #b2b2b2 0%,#b2b2b2 50%,#1b1b1b 50%,#1b1b1b 100%);
 }
 article{
-	width: 50%;
-	float:left;
 	box-sizing: border-box;
 	padding-top:60px;
 
 }
 
 article:first-of-type{
-	padding-right: 65px;
+	padding-right: 123px;
 	color:#000; /*black*/
-
 	
 }
 article:last-of-type{
-	padding-left: 65px;
-	
+	padding-right: 116px;
+
 }
+
 h2{
 	font-size: 36px;
 	font-weight: 300;
@@ -234,56 +240,65 @@ h2::after{
 }
 
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 900px) {
 	article{
-	width: 22%;
-	float:left;
 	box-sizing: border-box;
 	padding-top:30px;
 
 }
+
+.art-main{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+}
+
+.box{	
+	padding-left:60px;
+    box-sizing: border-box;
+
+}
 article:first-of-type{
 	padding-right: 25px;
-	color:#000; 
+	color:white; 
 	
 }
 article:last-of-type{
-	padding-left: 25px;
+	padding-top: 10px;
+	padding-right: 25px;
 	
 }
 h2{
-		font-size: 30px;
+	font-size: 30px;
 }
  .quote {
-    font-size: 15px;px;
+    font-size: 15px;
   }
  .text{
   	font-size: 14px;
   }
 }
 
+
 /*================ FOOTER =========*/
+
+
 .page-footer{
 	background: #111111;
 	padding-top: 25px;
-	width: 100%;
-    /*position: absolute;
-    height: auto;*/
- 
 }
 
-.footer-col{ /*footer doesnt see any floating elements, so we've got to
-use clear:both; again*/
-	width: 25%;
-	float: left;
-	/*height: auto;*/
-	/*box-sizing: border-box;*/
-	
+.ft-main{
+   
+    display: grid;
+    /*grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));*/
+    grid-template-columns: repeat(auto-fill, 280px);
 }
+
 .page-footer h3{
 	font-size: 13px;
 	text-transform: uppercase;
 	color:#ffffff;
+
 }
 .page-footer h3::after{
 	content: '.';
@@ -293,6 +308,9 @@ use clear:both; again*/
 	display: block;
 	background: #292929;
 	margin: 15px 0; /*t,b=15 l,r=0*/
+}
+.page-footer ul{
+	 padding-left: 0;
 }
 .page-footer li{
 	font-size: 13px;
@@ -313,61 +331,32 @@ use clear:both; again*/
 	margin-top: 32px;
 }
 .social a{
-	display: block; 
+
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+
 	width: 44px;
 	height: 44px;
 	border-radius: 50%; /*to make them circle*/
 	background:#000; 
 	color:#fff;
-	text-align: center;
-	line-height: 44px;
 }
 .social a:hover{
 	background: #fff; /*white*/
 	color:#ff0000; /*red*/
 }
+
 .social li{
 	display: inline-block;/*to have them in the same row*/
 
 }
 
+@media screen and (max-width: 500px) {
+.box{	
+	
+	padding-left:60px;
+    box-sizing: border-box;
 
-@media only screen and (max-width: 1139px) {
-  .wrapper .social {
-    width: 1000px;
-    display: block;
-  }
-  .social h3 {
-   padding-top: 15px;
-   margin:0px;
-  }
-}
-@media only screen and (max-width: 950px) {
-  .page-footer .footer-col {
-    width: 40%;
-  }
-  .page-footer .footer-col h3 {
-    font-size: 14px;
-  }
-  .page-footer .footer-col ul li {
-    font-size: 13px;
-  }
-}
-@media only screen and (max-width: 500px) {
-    .page-footer .footer-col {
-      width: 80%;
-    }
-    .page-footer .footer-col h3 {
-      font-size: 14px;
-      padding-top: 15px;
-    }
-    .page-footer .footer-col ul li {
-      font-size: 13px;
-    }
-}
-@media only screen and (max-width: 300px) {
-    .page-footer .footer-col {
-      width: 100%;
-    }
-   
-}
+}}
