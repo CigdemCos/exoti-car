@@ -143,14 +143,17 @@ body{
 	text-align: center;
 	font-size: 60px;
 	font-weight: bold;
+
 }
 h1{
 	text-transform: uppercase;
+	text-shadow: 1px 1px 5px #000000;
 }
 .subtitle{
 	font-size: 21px;
 	font-weight: 300; /*Bolder than 200, lighter than 400.*/
 	margin:25px 0; /*t,b=25 l,r=0*/
+	text-shadow: 1px 1px 10px #000000;
 }
 .learn-more{
 	display: block;
@@ -204,6 +207,7 @@ article:first-of-type{
 	padding-right: 123px;
 	/*color:#000; /*black*/
 	color:#ffffff;
+	 text-shadow: 1px 1px 10px #000000;
 	
 }
 article:last-of-type{
@@ -241,7 +245,7 @@ h2::after{
 	article{
 	box-sizing: border-box;
 	padding-top:30px;
-
+	 text-shadow: 1px 1px 10px #000000;
 
 }
 
@@ -264,8 +268,6 @@ article:first-of-type{
 article:last-of-type{
 	padding-top: 10px;
 	padding-right: 25px;
-
-
 	
 }
 h2{
@@ -293,6 +295,7 @@ h2{
     display: grid;
     /*grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));*/
     grid-template-columns: repeat(auto-fill, 280px);
+    grid-gap: 8px;
 }
 
 .page-footer h3{
@@ -308,7 +311,7 @@ h2{
 	height: 1px;
 	display: block;
 	background: #292929;
-	margin: 15px 0; /*t,b=15 l,r=0*/
+	margin: 12px 0; /*t,b=15 l,r=0*/
 }
 .page-footer ul{
 	 padding-left: 0;
